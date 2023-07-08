@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+.country-h1{
+    text-align: center;
+    margin: 1rem;
+    font-size: 4rem;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.country{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem;
+}
+
+.country img{
+    margin-left: auto;
+}
+
+.single-country img{
+    margin-left: auto;
+    margin-top: 2rem;
+    height: 15rem;
+}
+
+.single-country{
+    display: flex;
+    margin: 8rem 3rem 3rem 3rem;
+}

@@ -1,5 +1,7 @@
 import React,{ useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import styles from './main.css'
+import { Link } from "react-router-dom";
 function CountrySingle() {
   const { name } = useParams();
   const [country, setCountry] = useState([]);
@@ -29,18 +31,42 @@ function CountrySingle() {
   }, [country]);
 
   return (
-    <div>
+    <div className='container'>
        {country ? (
-        <div>
-          <h2>{country.name?.common}</h2>
-          <p>Capital: {country.capital?.[0]}</p>
-          <p>Population: {country.population}</p>
-          <p>Region: {country.region}</p>
+        <>
+           <h1 className='country-h1'>{country.name?.common}</h1>
+
+        <div className='single-country'>
+          <div>
+          <p> <b>Full Name:</b> {country.name?.official}</p>
+          <p><b>Capital:</b> {country.capital?.[0]}</p>
+          <p><b>Population:</b> {country.population}</p>
+         <p><b>Area:</b> {country.area} Square Kilometers</p>
+           {/* <p>Location: {country.latlng[0]} Lat {country.latlng[1]} Lng</p> */}
+          <p><b>Region: </b>{country.region}</p>
+          <p><b>Subregion:</b> {country.subregion}</p>
+          <p><b>Landlocked:</b> {country.landlocked ? "Yes" : "No"}</p>
+          <p><b>Timezones:</b> {country.timezones}</p>
+          </div>
+          
+           {/* <p>Borders: {country.borders.join(' ')}</p> 
+          <p>Flag Meaning: {country.flags.alt}</p> */}
+          
+          
+          {/* <p>Languages: {
+          Object.values(country.languages).forEach (value =>{
+            console.log(value)
+          })
+          }</p> */}
         <img src={country.flags?.png} alt="flag" /> <br></br>
+        
         </div>
+        </>
       ) : (
         <p>Loading country data...</p>
       )}
+
+        <Link to={'/'}>Back to home</Link>
     </div>
   )
 }

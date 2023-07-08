@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Country from './Country'
 import Search from './Search';
+import styles from './main.css'
 function CountryList() {
   const [countries, setCountries] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,7 +31,7 @@ function CountryList() {
   return (
     <div>
       <Search searchQuery={searchQuery} onSearch={handleSearch}  /> 
-      <h1>Country List</h1>
+      <h1 className={'country-h1'}>Country List</h1>
 
       { 
       filteredCountries ? filteredCountries.map((country) => (

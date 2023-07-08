@@ -1,5 +1,6 @@
 // import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import styles from './main.css'
 function CountryList({ country }) {
 //   const [country, setCountry] = useState([]);
 
@@ -19,13 +20,16 @@ function CountryList({ country }) {
 //   }, []);
 
   return (
-    <div>
-      <h2>{country.name.common}</h2>
-      <p>Capital: {country.capital}</p>
-      <p>Population: {country.population}</p>
-      <p>Region: {country.region}</p>
-      <img src={country.flags.png} alt="flag" /> <br></br>
+    <div  className={'country container'} >
+      <div>
+      <h2><b>Country: </b>{country.name.common}</h2>
+      <p><b>Capital: </b> {country.capital}</p>
+      <p><b>Population: </b> {country.population}</p>
+      <p><b>Region: </b>{country.region}</p>
+     
       <Link to={`country/${country.name.common}`}>Learn More..</Link>
+      </div>
+      <img src={country.flags.png} alt="flag" /> <br></br>
     </div>
     
   );
