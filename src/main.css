@@ -2,13 +2,12 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
-    color: white;
 }
 .country-h1{
     text-align: center;
     margin: 1rem;
     font-size: 4rem;
+    color: white;
 }
 .container{
     width: 90%;
@@ -19,19 +18,33 @@ body{
     display: flex;
     justify-content: space-between;
     margin: 3rem;
+   
+    padding: 2rem;
+    background-color: #2b2c2d;
+    color: white;
+    border-radius: 25px;
+    box-shadow:   0 4px 8px 0 rgba(250, 250, 250, 0.2), 0 6px 20px 0 rgba(250, 250, 250, 0.19);
 }
 
 .country img{
     margin-left: auto;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .single-country img{
     margin-left: auto;
     margin-top: 2rem;
     height: 15rem;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .single-country{
     display: flex;
     margin: 8rem 3rem 3rem 3rem;
+    border: 1px solid black;
+    padding: 2rem;
+    background-color:#2b2c2d;
+    color: white;
+    border-radius: 40px;
+    box-shadow:   0 4px 8px 0 rgba(250, 250, 250, 0.2), 0 6px 20px 0 rgba(250, 250, 250, 0.19);
 }

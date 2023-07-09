@@ -43,7 +43,7 @@ function CountryList() {
       }
 
       {
-        filteredCountries.length === 0 ? <h2> Country Not Found</h2> : filteredCountries.map((country) => (
+        filteredCountries.length === 0 ? <h2 style={{color: 'white'}}> Country Not Found</h2> : filteredCountries.map((country) => (
           <Country key = {country.name.common} country ={country} /> ))
       }
     </div>

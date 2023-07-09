@@ -8,7 +8,7 @@ function Search({ searchQuery, onSearch }) {
       value={searchQuery}
       onChange={handleChange}
 
-     type="text" className="form-control" placeholder="Search Here..." aria-label="Search" />
+     type="text" className="form-control" placeholder="Search Country Here..." aria-label="Search" />
     {/* <button className="btn btn-primary" type="button">Search</button> */}
   </div>
   )
